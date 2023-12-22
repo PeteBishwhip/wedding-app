@@ -352,13 +352,13 @@ class FFRoute {
                 )
               : builder(context, ffParams);
           final child = appStateNotifier.loading
-              ? Container(
-                  color: Colors.transparent,
-                  child: Center(
-                    child: Image.asset(
-                      'assets/images/Medical_ScheduleApp_0.0.png',
-                      width: MediaQuery.sizeOf(context).width * 0.5,
-                      fit: BoxFit.fitWidth,
+              ? Center(
+                  child: SizedBox(
+                    width: 40.0,
+                    height: 40.0,
+                    child: SpinKitPumpingHeart(
+                      color: FlutterFlowTheme.of(context).primary,
+                      size: 40.0,
                     ),
                   ),
                 )
